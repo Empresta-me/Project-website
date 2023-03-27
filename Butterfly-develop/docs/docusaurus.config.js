@@ -5,13 +5,13 @@ module.exports = {
   title: "EMPRESTA.ME",
   tagline:
     "Share with trust: Join a community of trusted sharers and make a positive impact on the world.",
-  url: "https://github.com/Empresta-me",
+  url: "https://docs.butterfly.linwood.dev",
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/emprestamelogo.png",
-  organizationName: "EMPRESTA.ME", // Usually your GitHub org/user name.
-  projectName: "EMPRESTA.ME", // Usually your repo name.
+  organizationName: "LinwoodCloud", // Usually your GitHub org/user name.
+  projectName: "butterfly", // Usually your repo name.
   i18n: {
     defaultLocale: "en",
     locales: ["en", "de", "fr", "es", "it", "pt-BR", "th", "tr", "ru"],
@@ -22,7 +22,6 @@ module.exports = {
       disableSwitch: false,
       respectPrefersColorScheme: true,
     },
-    /* I don't think this is necesssary
     algolia: {
       // The application ID provided by Algolia
       appId: "PQN0C3O7D3",
@@ -33,9 +32,9 @@ module.exports = {
       indexName: "docs-butterfly-linwood",
 
       //... other Algolia params
-    },*/
+    },
     navbar: {
-      title: "EMPRESTA.ME", // what the actual fuck
+      title: "EMPRESTA.ME",
       logo: {
         alt: "BEE Logo",
         src: "img/emprestalogo.png",
@@ -113,7 +112,7 @@ module.exports = {
           items: [
             {
               label: "JIRA",
-              href: "https://empresta-me.atlassian.net/jira/software/projects/EM/boards/1",
+              href: "https://github.com/LinwoodCloud/butterfly/tree/develop/app",
             },
           ],
         },

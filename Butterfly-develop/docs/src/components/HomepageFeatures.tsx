@@ -152,7 +152,6 @@ function Supervise(props) {
   );
 }
 
-
 const FunctionalityList = [
   {
     title: "Lend items",
@@ -205,12 +204,10 @@ function Functionality(props) {
   );
 }
 
-
-
 export default function HomepageFeatures() {
   return (
     <div>
-      <div className="container">
+      <div className="container" id="functionalitiessection">
       <div className={styles.headerFunc}>
       <h2 class={styles.functionalitiesTitle}>Main Functionalities</h2>
         </div>
@@ -218,7 +215,7 @@ export default function HomepageFeatures() {
             <Functionality key={idx} {...props} />
           ))}
       </div>
-    <section data-aos="fade-up" className={styles.TeamSection}>
+    <section data-aos="fade-up" id="team" className={styles.TeamSection}>
     <h2 class={styles.teamheader}>Team</h2>
       <div className="container">
         <div className="row" style={{ justifyContent: "center" }}>
@@ -238,7 +235,7 @@ export default function HomepageFeatures() {
           ))}
         </div>
       </div>
-    </section>
+    </section >
     <section data-aos="fade-up" className={styles.features}>
       <div className="container">
       <h2 class={styles.reqTitle}>Requirements</h2>
