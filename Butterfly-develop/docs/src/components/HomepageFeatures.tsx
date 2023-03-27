@@ -109,6 +109,25 @@ function Feature({Svg, title, description}) {
   );
 }
 
+function Doc(props) {
+  const { name, image, file } = props;
+
+  return (
+    <div className="col col--12">
+      <div className={styles.imageContainer}>
+        <img    src={image} alt={name} />
+        <p></p>
+        <h3>{name}</h3> 
+        <div className={styles.socialLinks}> 
+          <a href={file} download>
+            <button>Download</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 
 function TeamMember(props) {
   const { name, role, image, linkedin, github } = props;
@@ -156,27 +175,57 @@ const FunctionalityList = [
   {
     title: "Lend items",
     description: "Easily lend items to people in your community with just a few taps on your phone.",
-    gif: "/img/functionalities/mockup.gif",
+    gif: "/img/functionalities/feat_2.gif",
     gifPosition: "left",
   },
   {
     title: "Borrow items",
     description: "Quickly find items you need and borrow them from people in your community.",
-    gif: "/img/functionalities/mockup.gif",
+    gif: "/img/functionalities/feat_1.gif",
     gifPosition: "right",
   },
   {
-    title: "Host a community server",
-    description: "Create a server for your community and invite people to join, so they can start lending and borrowing items.",
-    gif: "/img/functionalities/mockup.gif",
+    title: "Conveniently connect with other people",
+    description: "Share your QR Code with your peers and become connected.",
+    gif: "/img/functionalities/feat_3.gif",
     gifPosition: "left",
   },
   {
     title: "See the network of trust",
     description: "View the network of trust between users in your community and see how reliable they are based on their borrowing and lending history.",
-    gif: "/img/functionalities/mockup.gif",
+    gif: "/img/functionalities/feat_4.gif",
     gifPosition: "right",
   },
+];
+
+const Doc_List = [
+  {
+    name: "MileStone 1",
+    image: require("../../static/img/icons/doc.jpg").default,
+    file: "../../static/documents/Milestone1.pptx"
+  },
+  {
+    name: "MileStone 2",
+    image: require("../../static/img/icons/doc.jpg").default,
+    file: "../../static/documents/Milestone2.pptx"
+  },
+  {
+    name: "Project Calendar",
+    image: require("../../static/img/icons/doc.jpg").default,
+    file: "../../static/documents/Project_Calendar.docx"
+  },
+  {
+    name: "Project Proposal",
+    image: require("../../static/img/icons/doc.jpg").default,
+    file: "../../static/documents/Proposal.pdf"
+  },
+  {
+    name: "MileStone1",
+    image: require("../../static/img/icons/doc.jpg").default,
+    file: "../../static/documents/t.txt"
+  },
+ 
+  
 ];
 
 function Functionality(props) {
@@ -248,6 +297,23 @@ export default function HomepageFeatures() {
         </div>
       </div>
     </section>
+
+    <section data-aos="fade-up" className={styles.features}>
+      <div className="container">
+      <h2 class={styles.reqTitle}>Deliverables</h2>
+      <p></p>
+      <p></p>
+        <div className="row">
+         
+            {Doc_List.map((props, idx) => ( 
+              <div className="col-lg-4 col-md-6 mb-5" key={idx}>
+                <Doc {...props} />
+              </div>
+            ))}
+          
+        </div>
+      </div>
+    </section> 
 </div>
   );
 }
