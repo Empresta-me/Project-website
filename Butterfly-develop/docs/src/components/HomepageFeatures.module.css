@@ -1,0 +1,165 @@
+/* stylelint-disable docusaurus/copyright-header */
+
+.features {
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  margin-bottom: 5.5rem;
+  width: 100%;
+  height: 600px;
+}
+
+.TeamSection {
+  background-color: #ffc251;
+  padding: 40px;
+  justify-content: center;
+}
+
+.featureSvg {
+  height: 200px;
+  width: 200px;
+}
+
+.teammember {
+  border-radius: 90px; 
+  object-fit: cover;
+  background-color: #f5f5f5;
+  height: 135px; 
+  width: 135px; 
+}
+
+.imageContainer {
+  width: 12vw; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.imageContainer .socialLinks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.socialLinks a{
+  margin-right: 10px;
+}
+
+
+.teamheader {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section-container {
+  display: flex;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 768px) {
+  .section-container {
+    flex-direction: column-reverse;
+  }
+}
+
+.functionalitySection {
+  display: flex;
+  padding: 2rem;
+  width: 100%;
+  justify-content: center;
+  box-sizing: border-box; /* add this property */
+}
+
+/*
+.functionalitySection:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.functionalitySection:nth-child(odd) {
+  background-color: #ffffff;
+}
+*/
+
+.functionalitySection .col {
+  flex: 1;
+}
+
+/*background-color: #f2f2f2;*/
+.headerFunc {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.functionalitiesTitle {
+  font-size: 37px;
+  margin-top: 1rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: center; /* Center the title */
+  margin-top: 4rem; /* Add negative margin to move the title up */
+}
+
+
+.funcTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  margin-top: 4rem;
+}
+
+.description {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  margin-top: 0.4rem; /* Add negative margin to move the title up */
+}
+
+.gifContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.gif {
+  max-width: 100%;
+  max-height: 570px;
+  object-fit: contain;
+}
+
+.reqTitle {
+  font-size: 37px;
+  margin-top: 1rem;
+  font-weight: bold;
+  margin-bottom: 4rem;
+  text-align: center; /* Center the title */
+  margin-top: 4rem; /* Add negative margin to move the title up */
+}
+
+
+
+
