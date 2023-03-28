@@ -40,18 +40,18 @@ function HomepageHeader({
             <div className={styles.indexCtas}>
               <AnimationOnScroll animateIn="animate__fadeInLeft">
                 <Link data-aos="fade-right"
-                  className={clsx("button button--lg button--secondary", styles.button)}
+                  className={clsx("button button--lg button--primary", styles.button)}
                   to={`${version.path}/intro`}>
                   <Translate description="homepage getting started button">
                     Know More
                   </Translate>
                 </Link>
               </AnimationOnScroll>
-              <AnimationOnScroll animateIn="animate__fadeInUp">
+              {/* <AnimationOnScroll animateIn="animate__fadeInUp">
                 <div className="dropdown dropdown--hoverable">
                   <a href="/downloads" className={clsx("button button--primary button--lg", styles.button)}>Deliverables</a>  
                 </div>
-              </AnimationOnScroll>
+              </AnimationOnScroll> */}
             </div>
           </div>
           <div className={clsx("col col--6", styles.center)}>
