@@ -119,8 +119,8 @@ function Doc(props) {
         <p></p>
         <h3>{name}</h3> 
         <div className={styles.socialLinks}> 
-          <a href={file} download>
-            <button>Download</button>
+          <a  >
+            <button onClick={onButtonClick} >Download</button>
           </a>
         </div>
       </div>
@@ -202,7 +202,7 @@ const Doc_List = [
   {
     name: "MileStone 1",
     image: require("../../static/img/icons/doc.jpg").default,
-    file: "../../static/documents/Milestone1.pptx"
+    file:  "../../static/documents/Milestone1.pptx"
   },
   {
     name: "MileStone 2",
@@ -251,6 +251,22 @@ function Functionality(props) {
     </section>
     </div>
   );
+}
+
+const onButtonClick = () => {
+
+  // using Java Script method to get PDF file
+  fetch('../../static/documents/Milestone1.pptx').then(response => {
+      response.blob().then(blob => {
+          // Creating new object of PDF file
+          const fileURL = window.URL.createObjectURL(blob);
+          // Setting various property values
+          let alink = document.createElement('a');
+          alink.href = fileURL;
+          alink.download = 'Milestone1.pptx';
+          alink.click();
+      })
+  })
 }
 
 export default function HomepageFeatures() {
