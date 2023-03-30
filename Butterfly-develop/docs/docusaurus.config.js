@@ -40,31 +40,32 @@ module.exports = {
         src: "img/emprestalogo.png",
       },
       items: [
-        {
+        /* {
           type: "doc",
           docId: "community",
           docsPluginId: "community",
           position: "left",
           label: "Functionalities",
-        },
-        {
+        }, */
+        /* {
           type: "doc",
           docId: "community",
           docsPluginId: "community",
           position: "left",
           label: "Team",
-        },
-        {
-          to: "downloads",
+        }, */
+        /* {
+          
+          to: "calendar",
           label: "Calendar",
           position: "left",
-        },
+        }, */
         {
           type: "doc",
           docId: "intro",
           position: "left",
           label: "Documentation",
-        },
+        },  
         {
           type: "dropdown",
           label: "More",
