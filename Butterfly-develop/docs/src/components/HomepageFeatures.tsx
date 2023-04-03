@@ -5,6 +5,13 @@ import Translate from '@docusaurus/Translate';
 import { FaGithub } from 'react-icons/fa';
 import { FaLinkedin } from 'react-icons/fa';
 
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Typography from '@mui/material/Typography';
+import { Button, CardActionArea, CardActions } from '@mui/material';
+import IconButton from '@mui/material/IconButton';  
+
 const TeamMembers = [
   {
     name: "Bruno Moura",
@@ -156,7 +163,7 @@ function Supervise(props) {
 
 const FunctionalityList = [
   {
-    title: "Lend items",
+    title: "Lend items",  
     description: "Easily lend items to people in your community with just a few taps on your phone.",
     gif: "/img/functionalities/feat_2.gif",
     gifPosition: "left",
@@ -230,55 +237,76 @@ const Download_File = (event, file, name) => {
   })
 }
 function Doc(props) {
-  const { name, image, file, file_name } = props;
+  const { name, description, image, file, file_name } = props;
 
   return (
+    
     <div className="col col--12">
-      <div className={styles.imageContainer}>
-        <img    src={image} alt={name} />
-        <p></p>
-        <h3>{name}</h3> 
-        <div className={styles.socialLinks}> 
-          <a  >
-            <button onClick={event => Download_File(event, file, file_name)} >Download</button>
-          </a>
-        </div>
-      </div>
+      <Card onClick={event => Download_File(event, file, file_name)} className={styles.imageContainer} sx={{ maxWidth: 240 }} style={{backgroundColor: "rgb(46, 47, 48)"}}>
+      <CardActionArea>
+        <CardMedia
+          component="img"
+          height="140"
+          image={image}
+          alt="green iguana"
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="div"  color="white">
+            {name}
+          </Typography>
+          <Typography variant="body2" color="lightgrey">
+            {description}
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+      <CardActions>
+        <Button   onClick={event => Download_File(event, file, file_name)} size="small" style={{color: "rgb(196, 132, 13)"}}>
+          Download
+        </Button> 
+      </CardActions>
+    </Card>
+
+  
     </div>
   );
 }
 const Doc_List = [
   {
     name: "MileStone 1 Presentation",
-    image: require("../../static/img/icons/doc.jpg").default,
+    description:"Powepoint Presentation made for the first Milestone",
+    image: require("../../static/img/Milestone2.png").default,
     file: "/documents/Milestone1.pptx",
     file_name: "Milestone1.pptx",
     
   },
   {
     name: "MileStone 2 Presentation",
-    image: require("../../static/img/icons/doc.jpg").default,
+    description:"Powepoint Presentation made for the second Milestone",
+    image: require("../../static/img/Milestone1.png").default,
     file: "/documents/Milestone2.pptx",
     file_name: "Milestone2.pptx"
    
   },
   {
     name: "Project Calendar",
-    image: require("../../static/img/icons/doc.jpg").default,
+    description:"Project Calendar Document",
+    image: require("../../static/img/Calendar.png").default,
     file: "/documents/Project_Calendar.docx",
     file_name: "Project_Calendar.docx"
   },
   {
     name: "Project Proposal",
-    image: require("../../static/img/icons/doc.jpg").default,
+    description:"Project Proposal Document made to intruducee our Project",
+    image: require("../../static/img/Proposal.png").default,
     file: "/documents/Proposal.pdf",
     file_name: "Proposal.pdf"
   },
   {
     name: "CheckPoint Presentation",
-    image: require("../../static/img/icons/doc.jpg").default,
-    file: "/documents/t.txt",
-    file_name: "t.txt"
+    description:"Powepoint Presentation made for the third MileStone CheckPoint",
+    image: require("../../static/img/CheckPoint.png").default,
+    file: "/documents/CheckPoint.pptx",
+    file_name: "CheckPoint.pptx"
   }  
  
   
