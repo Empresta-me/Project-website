@@ -109,24 +109,7 @@ function Feature({Svg, title, description}) {
   );
 }
 
-function Doc(props) {
-  const { name, image, file } = props;
 
-  return (
-    <div className="col col--12">
-      <div className={styles.imageContainer}>
-        <img    src={image} alt={name} />
-        <p></p>
-        <h3>{name}</h3> 
-        <div className={styles.socialLinks}> 
-          <a  >
-            <button onClick={onButtonClick} >Download</button>
-          </a>
-        </div>
-      </div>
-    </div>
-  );
-}
 
 
 function TeamMember(props) {
@@ -198,35 +181,7 @@ const FunctionalityList = [
   },
 ];
 
-const Doc_List = [
-  {
-    name: "MileStone 1",
-    image: require("../../static/img/icons/doc.jpg").default,
-    file:  "../../static/documents/Milestone1.pptx"
-  },
-  {
-    name: "MileStone 2",
-    image: require("../../static/img/icons/doc.jpg").default,
-    file: "../../static/documents/Milestone2.pptx"
-  },
-  {
-    name: "Project Calendar",
-    image: require("../../static/img/icons/doc.jpg").default,
-    file: "../../static/documents/Project_Calendar.docx"
-  },
-  {
-    name: "Project Proposal",
-    image: require("../../static/img/icons/doc.jpg").default,
-    file: "../../static/documents/Proposal.pdf"
-  },
-  {
-    name: "MileStone1",
-    image: require("../../static/img/icons/doc.jpg").default,
-    file: "../../static/documents/t.txt"
-  },
- 
-  
-];
+
 
 function Functionality(props) {
   const {title, description, gif, gifPosition, index} = props;
@@ -253,21 +208,81 @@ function Functionality(props) {
   );
 }
 
-const onButtonClick = () => {
+//Deliverables 
+
+const Download_File = (event, file, name) => {
 
   // using Java Script method to get PDF file
-  fetch('../../static/documents/Milestone1.pptx').then(response => {
+  fetch(file).then(response => {
       response.blob().then(blob => {
-          // Creating new object of PDF file
-          const fileURL = window.URL.createObjectURL(blob);
-          // Setting various property values
-          let alink = document.createElement('a');
-          alink.href = fileURL;
-          alink.download = 'Milestone1.pptx';
-          alink.click();
+
+        console.log(file);
+        // Creating new object of PDF file
+        const fileURL = window.URL.createObjectURL(blob);
+       
+        // Setting various property values
+        let alink = document.createElement('a');
+        alink.href = fileURL;
+        alink.download = name;
+        alink.click();
+         console.log(fileURL);
       })
   })
 }
+function Doc(props) {
+  const { name, image, file, file_name } = props;
+
+  return (
+    <div className="col col--12">
+      <div className={styles.imageContainer}>
+        <img    src={image} alt={name} />
+        <p></p>
+        <h3>{name}</h3> 
+        <div className={styles.socialLinks}> 
+          <a  >
+            <button onClick={event => Download_File(event, file, file_name)} >Download</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+}
+const Doc_List = [
+  {
+    name: "MileStone 1 Presentation",
+    image: require("../../static/img/icons/doc.jpg").default,
+    file: "/documents/Milestone1.pptx",
+    file_name: "Milestone1.pptx",
+    
+  },
+  {
+    name: "MileStone 2 Presentation",
+    image: require("../../static/img/icons/doc.jpg").default,
+    file: "/documents/Milestone2.pptx",
+    file_name: "Milestone2.pptx"
+   
+  },
+  {
+    name: "Project Calendar",
+    image: require("../../static/img/icons/doc.jpg").default,
+    file: "/documents/Project_Calendar.docx",
+    file_name: "Project_Calendar.docx"
+  },
+  {
+    name: "Project Proposal",
+    image: require("../../static/img/icons/doc.jpg").default,
+    file: "/documents/Proposal.pdf",
+    file_name: "Proposal.pdf"
+  },
+  {
+    name: "CheckPoint Presentation",
+    image: require("../../static/img/icons/doc.jpg").default,
+    file: "/documents/t.txt",
+    file_name: "t.txt"
+  }  
+ 
+  
+];
 
 export default function HomepageFeatures() {
   return (
