@@ -8,10 +8,7 @@ sidebar_position: 1
 
 ![Banner](/img/banner.png)
 
----
-
-> Welcome to Butterfly, the opensource item sharing app.
-> Use the sidebar to navigate through the documentation.
+--- 
 
 ## Context
 
