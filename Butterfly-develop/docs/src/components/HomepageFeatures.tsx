@@ -325,11 +325,18 @@ export default function HomepageFeatures() {
       </div>
     <section data-aos="fade-up" className={styles.features}>
       <div className="container">
-      <h2 class={styles.reqTitle}>Project Video</h2>
-      <p></p>
-      <p></p>
-        <div className="row">
-          <button href="https://www.youtube.com/watch?v=VNUgu2Z4tO0">Watch it on Youtube</button>
+        <h2 class={styles.reqTitle}>Project Video</h2>
+        <p></p>
+        <p></p>
+        <div className="video-wrapper">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/VNUgu2Z4tO0"
+            title="Project Video"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
         </div>
       </div>
     </section> 
