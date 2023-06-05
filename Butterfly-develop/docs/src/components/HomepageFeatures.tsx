@@ -323,6 +323,16 @@ export default function HomepageFeatures() {
             <Functionality key={idx} {...props} />
           ))}
       </div>
+    <section data-aos="fade-up" className={styles.features}>
+      <div className="container">
+      <h2 class={styles.reqTitle}>Project Video</h2>
+      <p></p>
+      <p></p>
+        <div className="row">
+          <button href="https://www.youtube.com/watch?v=VNUgu2Z4tO0">Watch it on Youtube</button>
+        </div>
+      </div>
+    </section> 
     <section data-aos="fade-up" id="team" className={styles.TeamSection}>
     <h2 class={styles.teamheader}>Team</h2>
       <div className="container">
