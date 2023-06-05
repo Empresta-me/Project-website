@@ -328,7 +328,7 @@ export default function HomepageFeatures() {
         <h2 class={styles.reqTitle}>Project Video</h2>
         <p></p>
         <p></p>
-        <div className="video-wrapper">
+        <div className="video-wrapper" style="display: flex; justify-content: center;">
           <iframe
             width="560"
             height="315"
