@@ -288,6 +288,22 @@ const Doc_List = [
    
   },
   {
+    name: "MileStone 3 Presentation",
+    description:"Powepoint Presentation made for the third Milestone",
+    image: require("../../static/img/Milestone2.png").default,
+    file: "/documents/Milestone2.pptx",
+    file_name: "Milestone2.pptx"
+   
+  },
+  {
+    name: "MileStone 4 Presentation",
+    description:"Powepoint Presentation made for the fourth Milestone",
+    image: require("../../static/img/Milestone1.png").default,
+    file: "/documents/Milestone2.pptx",
+    file_name: "Milestone2.pptx"
+   
+  },
+  {
     name: "Project Calendar",
     description:"Project Calendar Document",
     image: require("../../static/img/Calendar.png").default,
@@ -328,7 +344,7 @@ export default function HomepageFeatures() {
         <h2 class={styles.reqTitle}>Project Video</h2>
         <p></p>
         <p></p>
-        <div className="video-wrapper" style="display: flex; justify-content: center;">
+        <div className="video-wrapper" style={{ display: 'flex', justifyContent: 'center' }}>
           <iframe
             width="560"
             height="315"
