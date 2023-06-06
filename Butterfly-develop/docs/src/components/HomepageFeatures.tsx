@@ -60,23 +60,22 @@ const Supervisor = [
 
 const FeatureList = [
     {
-        title: (<Translate description="Features cross-platform title">Cross platform</Translate>),
+        title: (<Translate description="Features cross-platform title">Distributed</Translate>),
         Svg: require('../../static/img/undraw_progressive_app_m-9-ms.svg').default,
         description: (
             <Translate description="Features cross-platform description">
-                You can use the app on your phone or laptop.
-                The mobile app will be avaiable for Android.
+              Our system is distributed, meaning that multiple communities can be hosted in different servers.
+              This way, you can have your own community and manage it however you want.
             </Translate>
         ),
     },
     {
-        title: (<Translate description="Features simple title">Simple and intuitive</Translate>),
+        title: (<Translate description="Features simple title">Reputable</Translate>),
         Svg: require('../../static/img/undraw_innovative_b409.svg').default,
         description: (
             <Translate description="Features simple description">
-                Every tool is on the right place.
-                Open the app and start drawing.
-                Change your tools by clicking on it.
+                We use a reputation system to allow users to rate each other via vouches.
+                This way, you can know if you can trust someone before lending them your items.
             </Translate>
         ),
     },
@@ -95,8 +94,9 @@ const FeatureList = [
     Svg: require('../../static/img/undraw_sweet_home_dkhr.svg').default,
     description: (
       <Translate description="Features local description">
-          You can choose to store your data locally or in your favorite cloud (webdav).
-          You can also export your data to a file and import it again.
+          Our system is secure, meaning that all the data is encrypted and every message is digitally signed.
+          This way, you can be sure that your data is safe.
+          Choose the authentication method that suits your community the best.
       </Translate>
     ),
   },
