@@ -6,7 +6,7 @@
   padding: 2rem 0;
   margin-bottom: 5.5rem;
   width: 100%;
-  height: 600px;
+  height: 800px;
 }
 
 .deliverables {
@@ -22,6 +22,77 @@
   background-color: #ffc251;
   padding: 40px;
   justify-content: center;
+}
+
+.calSection {
+  background-color: #ffc251;
+  padding: 40px;
+  justify-content: center;
+  height: 760px;
+}
+
+.buttonContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  margin-top: 20px;
+}
+
+.calendarButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.calendarButton:hover {
+  background-color: #e0e0e0;
+}
+
+.buttonContent {
+  text-align: center;
+  font-weight: bold;
+}
+
+.endDate {
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 4px;
+  background-color: #f0f0f0; /* Add the desired background color */
+}
+
+
+.closeButton {
+  margin-top: 10px;
+  padding: 8px 16px;
+  border: none;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 .featureSvg {

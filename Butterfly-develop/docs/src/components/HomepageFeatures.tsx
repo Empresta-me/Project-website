@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import clsx from 'clsx';
 import styles from './HomepageFeatures.module.css';
 import Translate from '@docusaurus/Translate';
@@ -161,6 +161,97 @@ function Supervise(props) {
   );
 }
 
+
+const dates = [
+  {
+    iteration: 'Iteration 1',
+    startDate: '2023-02-14',
+    endDate: '2023-02-28',
+    tasks: [
+      'Project Inception',
+      'Project Calendar',
+      'Communication Plan'
+    ]
+  },
+  {
+    iteration: 'Iteration 2',
+    startDate: '2023-03-01',
+    endDate: '2023-03-14',
+    tasks: [
+      'Project Architecture',
+      'Visual prototype for the core tasks',
+      'API endpoints description'
+    ]
+  },
+  {
+    iteration: 'Iteration 3',
+    startDate: '2023-03-15',
+    endDate: '2023-03-28',
+    tasks: [
+      'Client/Server Communication',
+      'Reputation Algorithm refactoring',
+    ]
+  },
+  {
+    iteration: 'Iteration 4',
+    startDate: '2023-03-29',
+    endDate: '2023-04-11',
+    tasks: [
+      'User goods inventory.',
+      'Finish Communication inside a Community',
+    ]
+  },
+  {
+    iteration: 'Iteration 5',
+    startDate: '2023-04-11',
+    endDate: '2023-04-25',
+    tasks: [
+      'Peer Discovery',
+      'Reputation System Integration',
+    ]
+  },
+  {
+    iteration: 'Iteration 6',
+    startDate: '2023-04-26',
+    endDate: '2023-05-09',
+    tasks: [
+      'Integrate IDP',
+      'Notifications',
+      'Connections InterCommunity',
+    ]
+  },
+  {
+    iteration: 'Iteration 7',
+    startDate: '2023-05-10',
+    endDate: '2023-05-23',
+    tasks: [
+      'VRS Visualization',
+      'Security Requirements',
+    ]
+  },
+  {
+    iteration: 'Iteration 8',
+    startDate: '2023-05-23',
+    endDate: '2023-05-30',
+    tasks: [
+      'Research other security concerns',
+      'User Testing',
+      'Technical Report',
+    ]
+  },
+  {
+    iteration: 'Iteration 9',
+    startDate: '2023-05-30',
+    endDate: '2023-06-06',
+    tasks: [
+      'Revise the Technical Report',
+      'Presentations',
+    ]
+  },
+];
+
+
+
 const FunctionalityList = [
   {
     title: "Lend items",  
@@ -236,6 +327,7 @@ const Download_File = (event, file, name) => {
       })
   })
 }
+
 function Doc(props) {
   const { name, description, image, file, file_name } = props;
 
@@ -348,7 +440,24 @@ const Doc_List = [
   
 ];
 
+
 export default function HomepageFeatures() {
+  const [selectedIteration, setSelectedIteration] = useState<string | null>(null);
+
+  const getLastDate = (startDate: string, endDate: string) => {
+    const end = new Date(endDate);
+    return end.toLocaleDateString();
+  };
+  
+  
+  const openPopup = (iteration: string) => {
+    setSelectedIteration(iteration);
+  };
+  
+  const closePopup = () => {
+    setSelectedIteration(null);
+  };
+
   return (
     <div>
       <div className="container" id="functionalitiessection">
@@ -366,8 +475,8 @@ export default function HomepageFeatures() {
         <p></p>
         <div className="video-wrapper" style={{ display: 'flex', justifyContent: 'center' }}>
           <iframe
-            width="750"
-            height="450"
+            width="1200"
+            height="700"
             src="https://www.youtube.com/embed/x7mNJgTuKVw"
             title="Project Video"
             frameborder="0"
@@ -427,6 +536,49 @@ export default function HomepageFeatures() {
         </div>
       </div>
     </section> 
+    <section className={styles.calSection}>
+      <h2 className={styles.reqTitle}>Calendar</h2>
+      <div className={styles.buttonContainer}>
+        {dates.map((date, index) => (
+          <div key={index}>
+            <p></p>
+            <h2>{date.iteration}</h2>
+            <span className={styles.dateRange}>
+                    {getLastDate(date.startDate, date.endDate)}
+                  </span>
+            <div>
+              <button
+                className={styles.calendarButton}
+                onClick={() => openPopup(date.iteration)}
+              >
+                <div>
+                  <span>
+                    See Tasks
+                  </span>
+                </div>
+              </button>
+            </div>
+          </div>
+        ))}
+      </div>
+      {selectedIteration && (
+        <div className={styles.popup}>
+          <div className={styles.popupContent}>
+            <h3>Tasks for {selectedIteration}</h3>
+            <ul>
+              {dates.find((date) => date.iteration === selectedIteration)?.tasks.map(
+                (task, index) => (
+                  <li key={index}>{task}</li>
+                )
+              )}
+            </ul>
+            <button className={styles.closeButton} onClick={closePopup}>
+              Close
+            </button>
+          </div>
+        </div>
+      )}
+    </section>
 </div>
   );
 }
