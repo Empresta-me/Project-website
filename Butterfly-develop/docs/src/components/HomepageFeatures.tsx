@@ -288,22 +288,6 @@ const Doc_List = [
    
   },
   {
-    name: "MileStone 3 Presentation",
-    description:"Powepoint Presentation made for the third Milestone",
-    image: require("../../static/img/Milestone2.png").default,
-    file: "/documents/Milestone2.pptx",
-    file_name: "Milestone2.pptx"
-   
-  },
-  {
-    name: "MileStone 4 Presentation",
-    description:"Powepoint Presentation made for the fourth Milestone",
-    image: require("../../static/img/Milestone1.png").default,
-    file: "/documents/Milestone2.pptx",
-    file_name: "Milestone2.pptx"
-   
-  },
-  {
     name: "Project Calendar",
     description:"Project Calendar Document",
     image: require("../../static/img/Calendar.png").default,
@@ -339,23 +323,6 @@ export default function HomepageFeatures() {
             <Functionality key={idx} {...props} />
           ))}
       </div>
-    <section data-aos="fade-up" className={styles.features}>
-      <div className="container">
-        <h2 class={styles.reqTitle}>Project Video</h2>
-        <p></p>
-        <p></p>
-        <div className="video-wrapper" style={{ display: 'flex', justifyContent: 'center' }}>
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/VNUgu2Z4tO0"
-            title="Project Video"
-            frameborder="0"
-            allowfullscreen
-          ></iframe>
-        </div>
-      </div>
-    </section> 
     <section data-aos="fade-up" id="team" className={styles.TeamSection}>
     <h2 class={styles.teamheader}>Team</h2>
       <div className="container">
