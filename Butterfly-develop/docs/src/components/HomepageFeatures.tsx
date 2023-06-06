@@ -272,6 +272,34 @@ function Doc(props) {
 }
 const Doc_List = [
   {
+    name: "Project Calendar",
+    description:"Project Calendar Document",
+    image: require("../../static/img/Calendar.png").default,
+    file: "/documents/Project_Calendar.docx",
+    file_name: "Project_Calendar.docx"
+  },
+  {
+    name: "Project Proposal",
+    description:"Project Proposal Document made to intruducee our Project",
+    image: require("../../static/img/Proposal.png").default,
+    file: "/documents/Proposal.pdf",
+    file_name: "Proposal.pdf"
+  },
+  {
+    name: "Project Abstract",
+    description:"A 2 page summary of the Project",
+    image: require("../../static/img/Abstract.jpeg").default,
+    file: "/documents/Abstract.pdf",
+    file_name: "Abstract.pdf"
+  },
+  {
+    name: "Project Poster",
+    description:"Project Poster Shown at Students at DETI",
+    image: require("../../static/img/Poster.jpeg").default,
+    file: "/documents/Poster.pdf",
+    file_name: "Poster.pdf"
+  },
+  {
     name: "MileStone 1 Presentation",
     description:"Powepoint Presentation made for the first Milestone",
     image: require("../../static/img/Milestone2.png").default,
@@ -288,18 +316,12 @@ const Doc_List = [
    
   },
   {
-    name: "Project Calendar",
-    description:"Project Calendar Document",
-    image: require("../../static/img/Calendar.png").default,
-    file: "/documents/Project_Calendar.docx",
-    file_name: "Project_Calendar.docx"
-  },
-  {
-    name: "Project Proposal",
-    description:"Project Proposal Document made to intruducee our Project",
-    image: require("../../static/img/Proposal.png").default,
-    file: "/documents/Proposal.pdf",
-    file_name: "Proposal.pdf"
+    name: "MileStone 3 Presentation",
+    description:"Powepoint Presentation made for the third Milestone",
+    image: require("../../static/img/Milestone3.png").default,
+    file: "/documents/Milestone3.pptx",
+    file_name: "Milestone3.pptx"
+   
   },
   {
     name: "CheckPoint Presentation",
@@ -307,7 +329,21 @@ const Doc_List = [
     image: require("../../static/img/CheckPoint.png").default,
     file: "/documents/CheckPoint.pptx",
     file_name: "CheckPoint.pptx"
-  }  
+  },
+  {
+    name: "MileStone 4 Presentation",
+    description:"Powepoint Presentation made for the fourth Milestone",
+    image: require("../../static/img/Milestone4.png").default,
+    file: "/documents/Milestone4.pptx",
+    file_name: "Milestone4.pptx"
+  },
+  {
+    name: "Technical Report",
+    description:"Extensive Report on the Project",
+    image: require("../../static/img/Report.jpeg").default,
+    file: "/documents/Report.pdf",
+    file_name: "Report.pdf"
+  }
  
   
 ];
@@ -323,6 +359,23 @@ export default function HomepageFeatures() {
             <Functionality key={idx} {...props} />
           ))}
       </div>
+    <section data-aos="fade-up" className={styles.features}>
+      <div className="container">
+        <h2 class={styles.reqTitle}>Project Video</h2>
+        <p></p>
+        <p></p>
+        <div className="video-wrapper" style={{ display: 'flex', justifyContent: 'center' }}>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/x7mNJgTuKVw"
+            title="Project Video"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </section> 
     <section data-aos="fade-up" id="team" className={styles.TeamSection}>
     <h2 class={styles.teamheader}>Team</h2>
       <div className="container">
