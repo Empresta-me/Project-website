@@ -366,8 +366,8 @@ export default function HomepageFeatures() {
         <p></p>
         <div className="video-wrapper" style={{ display: 'flex', justifyContent: 'center' }}>
           <iframe
-            width="560"
-            height="315"
+            width="750"
+            height="450"
             src="https://www.youtube.com/embed/x7mNJgTuKVw"
             title="Project Video"
             frameborder="0"
@@ -409,8 +409,9 @@ export default function HomepageFeatures() {
         </div>
       </div>
     </section>
-
-    <section data-aos="fade-up" className={styles.features}>
+    <p></p>
+      <p></p>
+    <section data-aos="fade-up" className={styles.deliverables}>
       <div className="container">
       <h2 class={styles.reqTitle}>Deliverables</h2>
       <p></p>
